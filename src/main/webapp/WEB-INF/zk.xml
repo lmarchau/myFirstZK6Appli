@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <zk>
-	<!-- [Optional]
+    <library-property>
+            <name>org.zkoss.composite.packageScan</name>
+            <value>fr.weix.test.zk.components</value>
+    </library-property>	
+    <!-- [Optional]
 	Uncomment if you want to defines the application's name 
 	
 	<preference>

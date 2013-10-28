@@ -29,5 +29,8 @@
 				</template>
 			</listbox>
 		</vlayout>
+                <vlayout>
+                    <multiselectbox id="tags" />
+                </vlayout>
 	</window>
 </zk>
