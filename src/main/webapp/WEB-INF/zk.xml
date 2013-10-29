@@ -13,5 +13,7 @@
 		<value>zk6</value>
 	</preference>
 	-->
-	
+    <listener>
+        <listener-class>org.zkoss.composite.PackageScanWebAppInit</listener-class>
+    </listener>
 </zk>
