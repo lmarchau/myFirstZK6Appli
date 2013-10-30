@@ -5,12 +5,16 @@ import fr.weix.test.zk.entity.Log;
 import fr.weix.test.zk.services.MyService;
 import java.util.Arrays;
 import java.util.List;
+import org.zkoss.bind.annotation.AfterCompose;
 import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
+import org.zkoss.bind.annotation.ContextParam;
+import org.zkoss.bind.annotation.ContextType;
 import org.zkoss.bind.annotation.Init;
 import org.zkoss.lang.Strings;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
+import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.select.annotation.WireVariable;
@@ -24,14 +28,11 @@ public class MyViewModel {
 	private MyService myService;
 	private ListModelList<Log> logListModel;
 	private String message;
-
-        @Wire("#tags") private MultiSelectBox<String> tags; 
         
 	@Init
 	public void init() {
 		List<Log> logList = myService.getLogs();
 		logListModel = new ListModelList<Log>(logList);
-                tags.setDatas(Arrays.asList("TRACE", "INFO"));
 	}
 
 	public ListModel<Log> getLogListModel() {

@@ -47,7 +47,7 @@ public class MultiSelectBox<T extends Object>  extends Div implements IdSpace {
     }
     
     public Collection<T> getSelection() {
-        return ((Selectable<T>) select).getSelection();
+        return ((Selectable<T>) select.getModel()).getSelection();
     }
 
     private String getLabel(T bean) {

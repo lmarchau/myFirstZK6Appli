@@ -1,0 +1,11 @@
+<zk>
+	<window apply="fr.weix.test.zk.TryComposer" width="600px" vflex="1">
+                <vlayout>
+                    <multiselectbox id="tags" />
+                    <button id="check" label="OK GO!!" />
+                </vlayout>
+                <vlayout>
+                    <label id="choice" value="..." />
+                </vlayout>
+	</window>
+</zk>
