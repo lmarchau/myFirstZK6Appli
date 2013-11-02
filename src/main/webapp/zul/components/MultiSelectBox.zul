@@ -1,3 +1,19 @@
 <zk>
-    <listbox id="select" mold="select" multiple="true" ></listbox>
+    <div id="group">
+        <hbox>
+            <label id="infos">None</label>
+            <button id="all" label="All" />
+            <button id="none" label="None" />
+        </hbox>
+        <label id="debug">toto : ${arg.name}</label>
+        <label id="debug1">toto : ${args}</label>
+        <label id="debug2">toto : ${columns}</label>
+        <listbox id="select" checkmark="true" rows="6" multiple="true" >
+            <listhead>
+                <zk forEach="${arg.columns}" >
+                    <listheader label="${each}" />
+                </zk>
+            </listhead>
+        </listbox>
+    </div>
 </zk>

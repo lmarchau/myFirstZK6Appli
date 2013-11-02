@@ -5,6 +5,7 @@
 package fr.weix.test.zk;
 
 import fr.weix.test.zk.components.MultiSelectBox;
+import fr.weix.test.zk.entity.Level;
 import java.util.Arrays;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
@@ -23,7 +24,7 @@ import org.zkoss.zul.Window;
 @VariableResolver(DelegatingVariableResolver.class)
 public class TryComposer extends SelectorComposer<Window> {
     
-    @Wire private MultiSelectBox<String> tags;
+    @Wire private MultiSelectBox<Level> tags;
     
     @Wire private Label choice;
     @Wire private Button check;
@@ -31,7 +32,7 @@ public class TryComposer extends SelectorComposer<Window> {
     @Override
     public void doAfterCompose(Window win) throws Exception {
         super.doAfterCompose(win);
-        tags.setDatas(Arrays.asList("TRACE", "INFO"));
+        tags.setDatas(Arrays.asList(new Level("TRACE", 0), new Level("INFO", 1), new Level("DEBUG", 2), new Level("WARN", 3), new Level("ERROR", 4), new Level("DATA", 5), new Level("PERSO", 6), new Level("JOB", 7), new Level("CONF", 8), new Level("FAIL", 9), new Level("CRASH", 10)));
     }
     
     @Listen("onClick=#check")

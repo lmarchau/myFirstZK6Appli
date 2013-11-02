@@ -1,7 +1,7 @@
 <zk>
 	<window apply="fr.weix.test.zk.TryComposer" width="600px" vflex="1">
                 <vlayout>
-                    <multiselectbox id="tags" />
+                    <multiselectbox id="tags" name="toto" columns="name,weight" />
                     <button id="check" label="OK GO!!" />
                 </vlayout>
                 <vlayout>
