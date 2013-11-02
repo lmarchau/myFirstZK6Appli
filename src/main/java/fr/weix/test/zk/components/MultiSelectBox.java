@@ -7,6 +7,7 @@ package fr.weix.test.zk.components;
 import fr.weix.test.zk.entity.Level;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import org.zkoss.composite.Composite;
 import org.zkoss.composite.Composites;
@@ -42,7 +43,13 @@ public class MultiSelectBox<T extends Object>  extends Div implements IdSpace {
     
     
     public MultiSelectBox() {
-        Composites.doCompose(this, null);
+        Composites.doCompose(this, new HashMap<String, Object>() {
+            private static final long serialVersionUID = 1L;
+            {
+                put("columns", getColumns());
+                put("name", getName());
+            }
+        });
         init();
     }
     

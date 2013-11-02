@@ -6,8 +6,8 @@
             <button id="none" label="None" />
         </hbox>
         <label id="debug">toto : ${arg.name}</label>
-        <label id="debug1">toto : ${args}</label>
-        <label id="debug2">toto : ${columns}</label>
+        <label id="debug1">toto : ${arg}</label>
+        <label id="debug2">toto : ${arg.columns}</label>
         <listbox id="select" checkmark="true" rows="6" multiple="true" >
             <listhead>
                 <zk forEach="${arg.columns}" >
