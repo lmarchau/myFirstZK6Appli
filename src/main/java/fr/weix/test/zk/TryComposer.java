@@ -9,6 +9,7 @@ import fr.weix.test.zk.entity.Level;
 import java.util.Arrays;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
+import org.zkoss.zk.ui.select.Selectors;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.Wire;
@@ -27,7 +28,7 @@ public class TryComposer extends SelectorComposer<Window> {
     @Wire private MultiSelectBox<Level> tags;
     
     @Wire private Label choice;
-    @Wire private Button check;
+//    @Wire private Button check;
     
     @Override
     public void doAfterCompose(Window win) throws Exception {

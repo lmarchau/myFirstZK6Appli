@@ -21,6 +21,8 @@ import org.zkoss.zul.Label;
 import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Listbox;
 import org.zkoss.zul.Listcell;
+import org.zkoss.zul.Listhead;
+import org.zkoss.zul.Listheader;
 import org.zkoss.zul.Listitem;
 import org.zkoss.zul.ListitemRenderer;
 import org.zkoss.zul.ext.Selectable;
@@ -80,6 +82,12 @@ public class MultiSelectBox<T extends Object>  extends Div implements IdSpace {
 //    }
     public void setColumns(String columns)  {
         this.columns = columns;
+        Listhead lh = new Listhead();
+        for (String column : columns.split(",")) {
+            lh.appendChild(new Listheader(column));
+        }
+        select.appendChild(lh);
+
     }
     
 //    public List<String> getColumns() {

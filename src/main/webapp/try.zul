@@ -1,4 +1,4 @@
-<zk>
+ <zk>
 	<window apply="fr.weix.test.zk.TryComposer" width="600px" vflex="1">
                 <vlayout>
                     <multiselectbox id="tags" name="toto" columns="name,weight" />

@@ -5,15 +5,12 @@
             <button id="all" label="All" />
             <button id="none" label="None" />
         </hbox>
-        <label id="debug">toto : ${arg.name}</label>
-        <label id="debug1">toto : ${arg}</label>
-        <label id="debug2">toto : ${arg.columns}</label>
         <listbox id="select" checkmark="true" rows="6" multiple="true" >
-            <listhead>
+<!--            <listhead>
                 <zk forEach="${arg.columns}" >
                     <listheader label="${each}" />
                 </zk>
-            </listhead>
+            </listhead> -->
         </listbox>
     </div>
 </zk>
